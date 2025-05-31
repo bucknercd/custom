@@ -9,6 +9,6 @@ entries:
     name: custom
     type: application
     urls:
-    - https://bucknercd.github.io/custom/custom-0.1.0.tgz
+    - https://github.com/bucknercd/custom/blob/main/docs/custom-0.1.0.tgz
     version: 0.1.0
 generated: "2025-05-31T17:49:01.073165352Z"
