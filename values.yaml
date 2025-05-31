@@ -14,3 +14,5 @@ image:
   repository: nginx
   tag: latest
   pullPolicy: IfNotPresent
+
+replicas: 3
