@@ -1,0 +1,1 @@
+My initial helm chart! Goto / page on your one of your nodes using the nodeport specified by the svc in the custom namespace to see this simple website.

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>K8s Website by Chris Buckner</title>
+  <script src="https://unpkg.com/vue@3"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      color: white;
+      height: 100vh;
+      display: flex;
+    }
+
+    .sidebar {
+      width: 200px;
+      background: #333;
+      padding: 20px;
+    }
+
+    .sidebar button {
+      display: block;
+      margin: 10px 0;
+      width: 100%;
+      padding: 10px;
+      background-color: #555;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    .sidebar button:hover {
+      background-color: #666;
+    }
+
+    .content {
+      flex: 1;
+      padding: 40px;
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      margin-top: auto;
+      font-size: 0.9rem;
+      opacity: 0.7;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" style="display: flex; width: 100%;">
+    <div class="sidebar">
+      <button @click="currentSection = 'home'">Home</button>
+      <button @click="currentSection = 'about'">About</button>
+      <button @click="currentSection = 'actions'">Actions</button>
+    </div>
+
+    <div class="content">
+      <section v-if="currentSection === 'home'">
+        <h1>🚀 K8s Website by Chris Buckner</h1>
+        <h2>Welcome!</h2>
+        <p>This is the home page served from your container.</p>
+      </section>
+
+      <section v-if="currentSection === 'about'">
+        <h2>About This Site</h2>
+        <p>This is a Vue-enhanced static site, containerized and deployed in Kubernetes.</p>
+      </section>
+
+      <section v-if="currentSection === 'actions'">
+        <h2>Actions</h2>
+        <button @click="showAlert">Click Me</button>
+        <select v-model="selectedOption">
+          <option disabled value="">Choose an option</option>
+          <option>Start</option>
+          <option>Stop</option>
+          <option>Restart</option>
+        </select>
+      </section>
+
+      <div class="footer">Containerized with ❤️ in Kubernetes</div>
+    </div>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          currentSection: 'home',
+          selectedOption: ''
+        }
+      },
+      methods: {
+        showAlert() {
+          alert('This is an example action!');
+        }
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>
+
