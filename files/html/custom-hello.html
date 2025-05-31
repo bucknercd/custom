@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>K8s Website by Chris Buckner</title>
+  <title>K8s Website by {{ .Values.author }}</title>
   <script src="https://unpkg.com/vue@3"></script>
   <style>
     body {
@@ -63,7 +63,7 @@
 
     <div class="content">
       <section v-if="currentSection === 'home'">
-        <h1>🚀 K8s Website by Chris Buckner</h1>
+        <h1>🚀 K8s Website by {{ .Values.author }}</h1>
         <h2>Welcome!</h2>
         <p>This is the home page served from your container.</p>
       </section>

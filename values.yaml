@@ -1,3 +1,4 @@
+author: "Chris Buckner"
 namespace: custom  # default namespace, will match chart name or can be overridden
 
 app:

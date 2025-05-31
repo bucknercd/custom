@@ -23,7 +23,7 @@ metadata:
   namespace: {{ .Values.namespace }}
 data:
   custom-hello.html: |-
-{{ required "html/custom-hello.html file is required but not found!" (.Files.Get "files/html/custom-hello.html") | indent 4 }}
+{{ tpl (required "html/custom-hello.html file is required but not found!" (.Files.Get "files/html/custom-hello.html")) . | indent 4 }}
 ---
 apiVersion: apps/v1
 kind: Deployment
