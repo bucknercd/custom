@@ -1,5 +1,5 @@
 CHART_NAME=custom
-CHART_VERSION=0.1.0
+CHART_VERSION=0.1.1
 CHART_PACKAGE=$(CHART_NAME)-$(CHART_VERSION).tgz
 CHART_REPO_URL=https://github.com/bucknercd/custom/raw/main
 
