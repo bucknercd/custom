@@ -3,12 +3,12 @@ entries:
   custom:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-07-17T06:15:38.531768788Z"
+    created: "2025-08-14T14:41:36.410943608-04:00"
     description: A Helm chart for Kubernetes
-    digest: dd36b3107d200d80abb96154d4c89a09b0dadaba0e593cac86a6baba99f19cf4
+    digest: 86534e9a7ff738e5f20ee0375e00c3c87be88fb01e5b6175d222869982d51a5c
     name: custom
     type: application
     urls:
     - https://github.com/bucknercd/custom/raw/main/custom-0.1.1.tgz
     version: 0.1.1
-generated: "2025-07-17T06:15:38.528014494Z"
+generated: "2025-08-14T14:41:36.406783395-04:00"
